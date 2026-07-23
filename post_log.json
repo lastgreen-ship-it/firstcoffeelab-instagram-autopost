@@ -1,0 +1,12 @@
+{
+  "posts": [
+    {
+      "date": "2026-07-23",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "뽀모도로 리코타 파스타",
+      "status": "error",
+      "error": "이미지 호스팅 실패(모든 호스트): catbox 412; catbox 412; catbox 412; 0x0 503"
+    }
+  ]
+}
