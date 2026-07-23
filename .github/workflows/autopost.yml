@@ -1,0 +1,84 @@
+name: Instagram 자동 게시
+
+# 실행 시각
+#  - 매일 오전 11:00 KST = 02:00 UTC  → 오전(am) 슬롯
+#  - 매일 오후 17:00 KST = 08:00 UTC  → 오후(pm) 슬롯
+#  - workflow_dispatch: 수동 실행(테스트) 버튼. slot 을 골라 즉시 게시
+on:
+  schedule:
+    - cron: "0 2 * * *"    # 11:00 KST
+    - cron: "0 8 * * *"    # 17:00 KST
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "게시할 슬롯 (am 또는 pm)"
+        required: true
+        default: "am"
+        type: choice
+        options:
+          - am
+          - pm
+
+permissions:
+  contents: write   # 게시 후 content_queue.json(posted=true) 커밋을 위해 필요
+
+concurrency:
+  group: instagram-autopost
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: 파이썬 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 라이브러리 설치
+        run: pip install requests
+
+      - name: 슬롯 결정 (예약 실행은 현재 시각 기준, 수동은 입력값)
+        id: slot
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "slot=${{ github.event.inputs.slot }}" >> "$GITHUB_OUTPUT"
+          else
+            HOUR=$(TZ=Asia/Seoul date +%H)
+            if [ "$HOUR" -lt 14 ]; then
+              echo "slot=am" >> "$GITHUB_OUTPUT"
+            else
+              echo "slot=pm" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+      - name: 게시 실행
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}   # 없으면 스크립트 기본값 사용
+        run: |
+          set +e
+          python instagram_post.py --slot ${{ steps.slot.outputs.slot }}
+          code=$?
+          # 종료코드 2 = 게시할 콘텐츠 없음 → 실패가 아니라 정상으로 처리
+          if [ "$code" = "2" ]; then
+            echo "게시할 콘텐츠 없음 — 정상 종료로 처리"
+            exit 0
+          fi
+          exit $code
+
+      - name: 게시 결과(posted 표시) 커밋
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content_queue.json post_log.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "변경 없음 — 커밋 생략"
+          else
+            git commit -m "chore: 게시 상태 업데이트 [skip ci]"
+            git push
+          fi
