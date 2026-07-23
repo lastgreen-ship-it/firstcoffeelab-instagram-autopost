@@ -15,6 +15,14 @@
       "title": "뽀모도로 리코타 파스타",
       "status": "error",
       "error": "컨테이너 생성 실패: {'error': {'message': \"Unsupported post request. Object with ID 'media' does not exist, cannot be loaded due to missing permissions, or does not support this operation\", 'type': 'IGApiException', 'code': 100, 'error_subcode': 33, 'fbtrace_id': 'AQkmD1dAo5O_A7sTtEOdRaW'}}"
+    },
+    {
+      "date": "2026-07-23",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "뽀모도로 리코타 파스타",
+      "media_id": "18209236561360262",
+      "status": "success"
     }
   ]
 }
