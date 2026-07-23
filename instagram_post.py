@@ -100,6 +100,23 @@ def upload_public(path, mime):
     raise RuntimeError("이미지 호스팅 실패(모든 호스트): " + "; ".join(errs))
 
 
+def public_url(rel_path, local_path, mime):
+    """미디어의 공개 URL을 반환.
+    - GitHub Actions(공개 저장소)에서 실행 시: raw.githubusercontent.com 직접 URL 사용(외부 호스팅 불필요).
+    - 그 외(로컬 PC 등): 임시 호스트(catbox/0x0)에 업로드.
+    IMAGE_BASE_URL 환경변수로 베이스 URL을 직접 지정할 수도 있음."""
+    from urllib.parse import quote
+    base = os.environ.get("IMAGE_BASE_URL")
+    if not base:
+        repo = os.environ.get("GITHUB_REPOSITORY")
+        ref = os.environ.get("GITHUB_REF_NAME", "main")
+        if repo:
+            base = f"https://raw.githubusercontent.com/{repo}/{ref}/"
+    if base:
+        return base.rstrip("/") + "/" + quote(rel_path)
+    return upload_public(local_path, mime)
+
+
 def pick(queue, today, slot):
     items = queue.get("items", [])
     for it in items:
@@ -208,13 +225,13 @@ def main():
 
     try:
         mime = "video/mp4" if mt == "REELS" else "image/jpeg"
-        url = upload_public(str(media), mime)
+        url = public_url(item["image_path"], str(media), mime)
         log(f"공개 URL 확보: {url}")
         cover = None
         if item.get("cover_path"):
             cp = (BASE / item["cover_path"]).resolve()
             if cp.exists():
-                cover = upload_public(str(cp), "image/jpeg")
+                cover = public_url(item["cover_path"], str(cp), "image/jpeg")
         mid = publish(ig_id, token, url, item.get("caption", ""), mt, cover)
         log(f"게시 완료! media_id={mid}")
         item["posted"] = True
