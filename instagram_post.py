@@ -184,7 +184,7 @@ def main():
     args = ap.parse_args()
 
     load_env()
-    ig_id = os.environ.get("IG_USER_ID", DEFAULT_IG_USER_ID)
+    ig_id = os.environ.get("IG_USER_ID") or DEFAULT_IG_USER_ID
     token = os.environ.get("IG_ACCESS_TOKEN")
 
     if args.check:
