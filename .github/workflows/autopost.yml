@@ -1,13 +1,23 @@
 name: Instagram 자동 게시
 
-# 실행 시각
-#  - 매일 오전 11:17 KST = 02:17 UTC  → 오전(am) 슬롯
-#  - 매일 오후 17:17 KST = 08:17 UTC  → 오후(pm) 슬롯
+# 실행 시각 (한 슬롯당 여러 번 시도 — GitHub 예약이 가끔 스킵돼도 하나만 뜨면 게시됨)
+#  - 오전(am): 11:17~12:05 KST 사이 5회
+#  - 오후(pm): 17:17~18:05 KST 사이 5회
 #  - workflow_dispatch: 수동 실행(테스트) 버튼. slot 을 골라 즉시 게시
 on:
   schedule:
-    - cron: "17 2 * * *"   # 11:17 KST (정시 혼잡 회피)
-    - cron: "17 8 * * *"   # 17:17 KST (정시 혼잡 회피)
+    # 오전(am) 슬롯 — 11:17~12:05 KST 5회
+    - cron: "17 2 * * *"   # 11:17 KST
+    - cron: "29 2 * * *"   # 11:29 KST
+    - cron: "41 2 * * *"   # 11:41 KST
+    - cron: "53 2 * * *"   # 11:53 KST
+    - cron: "5 3 * * *"    # 12:05 KST
+    # 오후(pm) 슬롯 — 17:17~18:05 KST 5회
+    - cron: "17 8 * * *"   # 17:17 KST
+    - cron: "29 8 * * *"   # 17:29 KST
+    - cron: "41 8 * * *"   # 17:41 KST
+    - cron: "53 8 * * *"   # 17:53 KST
+    - cron: "5 9 * * *"    # 18:05 KST
   workflow_dispatch:
     inputs:
       slot:
@@ -32,6 +42,8 @@ jobs:
     steps:
       - name: 저장소 체크아웃
         uses: actions/checkout@v4
+        with:
+          ref: main   # 항상 최신 main 기준(여러 예약이 겹쳐도 직전 게시 결과를 반영해 중복 방지)
 
       - name: 파이썬 설치
         uses: actions/setup-python@v5
