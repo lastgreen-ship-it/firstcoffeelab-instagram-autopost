@@ -1,13 +1,13 @@
 name: Instagram 자동 게시
 
 # 실행 시각
-#  - 매일 오전 11:00 KST = 02:00 UTC  → 오전(am) 슬롯
-#  - 매일 오후 17:00 KST = 08:00 UTC  → 오후(pm) 슬롯
+#  - 매일 오전 11:17 KST = 02:17 UTC  → 오전(am) 슬롯
+#  - 매일 오후 17:17 KST = 08:17 UTC  → 오후(pm) 슬롯
 #  - workflow_dispatch: 수동 실행(테스트) 버튼. slot 을 골라 즉시 게시
 on:
   schedule:
-    - cron: "0 2 * * *"    # 11:00 KST
-    - cron: "0 8 * * *"    # 17:00 KST
+    - cron: "17 2 * * *"   # 11:17 KST (정시 혼잡 회피)
+    - cron: "17 8 * * *"   # 17:17 KST (정시 혼잡 회피)
   workflow_dispatch:
     inputs:
       slot:
