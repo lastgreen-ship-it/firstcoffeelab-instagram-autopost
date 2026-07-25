@@ -103,8 +103,9 @@
       "title": "저녁 감성 무드",
       "media_type": "IMAGE",
       "image_path": "12_evening_mood.jpg",
-      "posted": false,
-      "caption": "하루의 끝, 커피 한 잔의 여유 ☕ 퍼스트커피랩에서 편안한 저녁 보내세요.\n\n#퍼스트커피랩 #firstcoffeelab #감성카페 #카페투어 #힐링 #커피한잔 #분위기좋은카페"
+      "posted": true,
+      "caption": "하루의 끝, 커피 한 잔의 여유 ☕ 퍼스트커피랩에서 편안한 저녁 보내세요.\n\n#퍼스트커피랩 #firstcoffeelab #감성카페 #카페투어 #힐링 #커피한잔 #분위기좋은카페",
+      "posted_at": "2026-07-25T09:19:49.269419"
     }
   ]
 }
