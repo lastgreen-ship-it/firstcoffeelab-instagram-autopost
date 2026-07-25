@@ -47,6 +47,14 @@
       "title": "모짜렐라 치즈 피자",
       "media_id": "17861587266662270",
       "status": "success"
+    },
+    {
+      "date": "2026-07-25",
+      "slot": "pm",
+      "type": "IMAGE",
+      "title": "잠봉뵈르 리코타 피자",
+      "media_id": "18360457891240561",
+      "status": "success"
     }
   ]
 }
