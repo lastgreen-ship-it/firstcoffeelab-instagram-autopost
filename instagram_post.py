@@ -122,7 +122,11 @@ def pick(queue, today, slot):
     for it in items:
         if it.get("date") == today and it.get("slot") == slot and not it.get("posted"):
             return it
-    pend = [it for it in items if it.get("slot") == slot and not it.get("posted")]
+    # 폴백: 해당 슬롯의 '오늘 이전(과거)' 미게시 항목만 처리 — 미래 날짜 항목을 당겨쓰지 않음.
+    # (예약을 한 슬롯당 여러 번 걸어도, 이미 오늘 게시가 끝났으면 다음날 것을 조기 게시하지 않도록)
+    pend = [it for it in items
+            if it.get("slot") == slot and not it.get("posted")
+            and it.get("date", "") <= today]
     pend.sort(key=lambda it: it.get("date", ""))
     return pend[0] if pend else None
 
