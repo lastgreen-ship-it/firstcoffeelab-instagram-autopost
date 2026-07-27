@@ -71,6 +71,14 @@
       "title": "저녁 감성 무드",
       "media_id": "18118987574501471",
       "status": "success"
+    },
+    {
+      "date": "2026-07-27",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "크루아상 & 페이스트리",
+      "media_id": "18091914011623277",
+      "status": "success"
     }
   ]
 }
