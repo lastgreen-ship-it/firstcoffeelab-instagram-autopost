@@ -1,23 +1,20 @@
 name: Instagram 자동 게시
 
 # 실행 시각 (한 슬롯당 여러 번 시도 — GitHub 예약이 가끔 스킵돼도 하나만 뜨면 게시됨)
-#  - 오전(am): 11:17~12:05 KST 사이 5회
-#  - 오후(pm): 17:17~18:05 KST 사이 5회
-#  - workflow_dispatch: 수동 실행(테스트) 버튼. slot 을 골라 즉시 게시
+#  - 오전(am): 11:17~12:05 KST 5회 / 오후(pm): 17:17~18:05 KST 5회
+#  - 슬롯은 '예약된 cron' 기준으로 판정하므로 실행이 지연돼도 오전/오후가 뒤바뀌지 않음
 on:
   schedule:
-    # 오전(am) 슬롯 — 11:17~12:05 KST 5회
-    - cron: "17 2 * * *"   # 11:17 KST
-    - cron: "29 2 * * *"   # 11:29 KST
-    - cron: "41 2 * * *"   # 11:41 KST
-    - cron: "53 2 * * *"   # 11:53 KST
-    - cron: "5 3 * * *"    # 12:05 KST
-    # 오후(pm) 슬롯 — 17:17~18:05 KST 5회
-    - cron: "17 8 * * *"   # 17:17 KST
-    - cron: "29 8 * * *"   # 17:29 KST
-    - cron: "41 8 * * *"   # 17:41 KST
-    - cron: "53 8 * * *"   # 17:53 KST
-    - cron: "5 9 * * *"    # 18:05 KST
+    - cron: "17 2 * * *"   # 11:17 KST (am)
+    - cron: "29 2 * * *"   # 11:29 KST (am)
+    - cron: "41 2 * * *"   # 11:41 KST (am)
+    - cron: "53 2 * * *"   # 11:53 KST (am)
+    - cron: "5 3 * * *"    # 12:05 KST (am)
+    - cron: "17 8 * * *"   # 17:17 KST (pm)
+    - cron: "29 8 * * *"   # 17:29 KST (pm)
+    - cron: "41 8 * * *"   # 17:41 KST (pm)
+    - cron: "53 8 * * *"   # 17:53 KST (pm)
+    - cron: "5 9 * * *"    # 18:05 KST (pm)
   workflow_dispatch:
     inputs:
       slot:
@@ -30,7 +27,7 @@ on:
           - pm
 
 permissions:
-  contents: write   # 게시 후 content_queue.json(posted=true) 커밋을 위해 필요
+  contents: write
 
 concurrency:
   group: instagram-autopost
@@ -43,7 +40,7 @@ jobs:
       - name: 저장소 체크아웃
         uses: actions/checkout@v4
         with:
-          ref: main   # 항상 최신 main 기준(여러 예약이 겹쳐도 직전 게시 결과를 반영해 중복 방지)
+          ref: main
 
       - name: 파이썬 설치
         uses: actions/setup-python@v5
@@ -53,14 +50,14 @@ jobs:
       - name: 라이브러리 설치
         run: pip install requests
 
-      - name: 슬롯 결정 (예약 실행은 현재 시각 기준, 수동은 입력값)
+      - name: 슬롯 결정 (예약된 cron 기준 — 실행이 지연돼도 정확)
         id: slot
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "slot=${{ github.event.inputs.slot }}" >> "$GITHUB_OUTPUT"
           else
-            HOUR=$(TZ=Asia/Seoul date +%H)
-            if [ "$HOUR" -lt 14 ]; then
+            CRON_HOUR=$(echo "${{ github.event.schedule }}" | awk '{print $2}')
+            if [ "$CRON_HOUR" = "2" ] || [ "$CRON_HOUR" = "3" ]; then
               echo "slot=am" >> "$GITHUB_OUTPUT"
             else
               echo "slot=pm" >> "$GITHUB_OUTPUT"
@@ -70,12 +67,11 @@ jobs:
       - name: 게시 실행
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          IG_USER_ID: ${{ secrets.IG_USER_ID }}   # 없으면 스크립트 기본값 사용
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
         run: |
           set +e
           python instagram_post.py --slot ${{ steps.slot.outputs.slot }}
           code=$?
-          # 종료코드 2 = 게시할 콘텐츠 없음 → 실패가 아니라 정상으로 처리
           if [ "$code" = "2" ]; then
             echo "게시할 콘텐츠 없음 — 정상 종료로 처리"
             exit 0
