@@ -97,8 +97,9 @@
       "title": "매장 분위기",
       "media_type": "IMAGE",
       "image_path": "11_store_ambience.jpg",
-      "posted": false,
-      "caption": "가까운 퍼스트커피랩 매장으로 놀러 오세요. 📍 전국 매장에서 만나요.\n\n#퍼스트커피랩 #firstcoffeelab #카페투어 #감성카페 #카페스타그램 #분위기좋은카페"
+      "posted": true,
+      "caption": "가까운 퍼스트커피랩 매장으로 놀러 오세요. 📍 전국 매장에서 만나요.\n\n#퍼스트커피랩 #firstcoffeelab #카페투어 #감성카페 #카페스타그램 #분위기좋은카페",
+      "posted_at": "2026-07-28T08:44:30.640205"
     },
     {
       "date": "2026-07-28",

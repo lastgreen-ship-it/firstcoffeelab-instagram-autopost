@@ -103,6 +103,14 @@
       "title": "마르게리타 치즈 피자",
       "media_id": "18103921700176727",
       "status": "success"
+    },
+    {
+      "date": "2026-07-28",
+      "slot": "pm",
+      "type": "IMAGE",
+      "title": "매장 분위기",
+      "media_id": "18219609964332829",
+      "status": "success"
     }
   ]
 }
