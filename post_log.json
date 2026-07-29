@@ -119,6 +119,14 @@
       "title": "여름 낮 폭포",
       "media_id": "18127510612731484",
       "status": "success"
+    },
+    {
+      "date": "2026-07-29",
+      "slot": "pm",
+      "type": "IMAGE",
+      "title": "여름밤 폭포·달",
+      "media_id": "17887448844602988",
+      "status": "success"
     }
   ]
 }
