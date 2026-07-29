@@ -111,6 +111,14 @@
       "title": "매장 분위기",
       "media_id": "18219609964332829",
       "status": "success"
+    },
+    {
+      "date": "2026-07-29",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "여름 낮 폭포",
+      "media_id": "18127510612731484",
+      "status": "success"
     }
   ]
 }
