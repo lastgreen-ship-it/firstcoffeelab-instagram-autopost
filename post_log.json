@@ -135,6 +135,14 @@
       "title": "시원한 대형카페 공간",
       "media_id": "18547424719078523",
       "status": "success"
+    },
+    {
+      "date": "2026-07-30",
+      "slot": "pm",
+      "type": "IMAGE",
+      "title": "달빛 미디어아트 공간",
+      "media_id": "18610165888030850",
+      "status": "success"
     }
   ]
 }
