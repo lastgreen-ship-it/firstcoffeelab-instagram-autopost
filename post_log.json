@@ -151,6 +151,14 @@
       "title": "베이커리 & 아이스 아메리카노",
       "media_id": "18476307298109729",
       "status": "success"
+    },
+    {
+      "date": "2026-07-31",
+      "slot": "pm",
+      "type": "IMAGE",
+      "title": "주말 여름 나들이",
+      "media_id": "18021855371893028",
+      "status": "success"
     }
   ]
 }
