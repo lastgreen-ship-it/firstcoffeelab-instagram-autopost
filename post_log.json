@@ -175,6 +175,14 @@
       "title": "아이스 카페라떼 (행궁점 야경)",
       "media_id": "18020619875697221",
       "status": "success"
+    },
+    {
+      "date": "2026-08-02",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "콜드브루",
+      "media_id": "18171339754437006",
+      "status": "success"
     }
   ]
 }
