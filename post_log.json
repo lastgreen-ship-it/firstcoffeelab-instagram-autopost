@@ -183,6 +183,14 @@
       "title": "콜드브루",
       "media_id": "18171339754437006",
       "status": "success"
+    },
+    {
+      "date": "2026-08-02",
+      "slot": "pm",
+      "type": "IMAGE",
+      "title": "자몽 에이드",
+      "media_id": "17928310890380090",
+      "status": "success"
     }
   ]
 }
