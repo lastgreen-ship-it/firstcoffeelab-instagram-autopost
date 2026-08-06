@@ -223,6 +223,14 @@
       "title": "행궁점 좌석 공간",
       "media_id": "18223866889323732",
       "status": "success"
+    },
+    {
+      "date": "2026-08-06",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "시그니처 갈레트",
+      "media_id": "18065733224746238",
+      "status": "success"
     }
   ]
 }
