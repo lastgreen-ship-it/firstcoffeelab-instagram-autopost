@@ -247,6 +247,14 @@
       "title": "베이커리 진열대",
       "media_id": "18101551853611533",
       "status": "success"
+    },
+    {
+      "date": "2026-08-09",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "행궁점 라운지 좌석",
+      "media_id": "17884997154455627",
+      "status": "success"
     }
   ]
 }
