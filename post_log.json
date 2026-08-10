@@ -255,6 +255,14 @@
       "title": "행궁점 라운지 좌석",
       "media_id": "17884997154455627",
       "status": "success"
+    },
+    {
+      "date": "2026-08-10",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "초콜릿 디저트",
+      "media_id": "18131146375724061",
+      "status": "success"
     }
   ]
 }
