@@ -263,6 +263,14 @@
       "title": "초콜릿 디저트",
       "media_id": "18131146375724061",
       "status": "success"
+    },
+    {
+      "date": "2026-08-11",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "행궁점 복층 공간",
+      "media_id": "17870428485635759",
+      "status": "success"
     }
   ]
 }
