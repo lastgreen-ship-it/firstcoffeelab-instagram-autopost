@@ -295,6 +295,14 @@
       "title": "오픈 갈레트 브런치",
       "media_id": "18031225349835255",
       "status": "success"
+    },
+    {
+      "date": "2026-08-15",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "저녁 무드 베이커리",
+      "media_id": "18111179975105831",
+      "status": "success"
     }
   ]
 }
