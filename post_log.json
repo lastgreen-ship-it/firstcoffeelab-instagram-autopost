@@ -303,6 +303,14 @@
       "title": "저녁 무드 베이커리",
       "media_id": "18111179975105831",
       "status": "success"
+    },
+    {
+      "date": "2026-08-16",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "갓 구운 페이스트리",
+      "media_id": "18449655745185466",
+      "status": "success"
     }
   ]
 }
