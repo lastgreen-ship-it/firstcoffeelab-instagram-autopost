@@ -319,6 +319,14 @@
       "title": "실내 폭포 정원",
       "media_id": "17985005151103979",
       "status": "success"
+    },
+    {
+      "date": "2026-08-18",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "행궁점 커피 바",
+      "media_id": "17983501881061469",
+      "status": "success"
     }
   ]
 }
