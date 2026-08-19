@@ -327,6 +327,14 @@
       "title": "행궁점 커피 바",
       "media_id": "17983501881061469",
       "status": "success"
+    },
+    {
+      "date": "2026-08-19",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "행궁점 베이커리",
+      "media_id": "18107830808466623",
+      "status": "success"
     }
   ]
 }
