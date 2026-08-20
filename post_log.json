@@ -335,6 +335,14 @@
       "title": "행궁점 베이커리",
       "media_id": "18107830808466623",
       "status": "success"
+    },
+    {
+      "date": "2026-08-20",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "행궁점 소파 라운지",
+      "media_id": "18124016816499286",
+      "status": "success"
     }
   ]
 }
