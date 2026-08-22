@@ -351,6 +351,14 @@
       "title": "실내 폭포 공간",
       "media_id": "18108430211152089",
       "status": "success"
+    },
+    {
+      "date": "2026-08-22",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "행궁점 외관",
+      "media_id": "18111442115087923",
+      "status": "success"
     }
   ]
 }
