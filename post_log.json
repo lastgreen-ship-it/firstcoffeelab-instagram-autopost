@@ -375,6 +375,14 @@
       "title": "달빛 아래 커피바",
       "media_id": "17893660080669543",
       "status": "success"
+    },
+    {
+      "date": "2026-08-25",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "밤의 정원 중정",
+      "media_id": "18307274401303395",
+      "status": "success"
     }
   ]
 }
