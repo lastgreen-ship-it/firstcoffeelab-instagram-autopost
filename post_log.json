@@ -383,6 +383,14 @@
       "title": "밤의 정원 중정",
       "media_id": "18307274401303395",
       "status": "success"
+    },
+    {
+      "date": "2026-08-26",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "밤의 분수 무드",
+      "media_id": "18067235567725958",
+      "status": "success"
     }
   ]
 }
