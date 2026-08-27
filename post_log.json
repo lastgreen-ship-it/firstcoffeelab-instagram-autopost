@@ -391,6 +391,14 @@
       "title": "밤의 분수 무드",
       "media_id": "18067235567725958",
       "status": "success"
+    },
+    {
+      "date": "2026-08-27",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "폭포 미디어월 홀",
+      "media_id": "18339425515252864",
+      "status": "success"
     }
   ]
 }
