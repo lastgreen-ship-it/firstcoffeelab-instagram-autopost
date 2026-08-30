@@ -415,6 +415,14 @@
       "title": "달빛 좌식 공간",
       "media_id": "17924722917419816",
       "status": "success"
+    },
+    {
+      "date": "2026-08-30",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "달 미디어아트",
+      "media_id": "18108875429133824",
+      "status": "success"
     }
   ]
 }
