@@ -423,6 +423,14 @@
       "title": "달 미디어아트",
       "media_id": "18108875429133824",
       "status": "success"
+    },
+    {
+      "date": "2026-08-31",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "미디어 라운지",
+      "media_id": "17864949924658076",
+      "status": "success"
     }
   ]
 }
