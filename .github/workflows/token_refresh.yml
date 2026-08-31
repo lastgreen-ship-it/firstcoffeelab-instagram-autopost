@@ -1,0 +1,44 @@
+name: IG 토큰 자동 갱신
+
+# 인스타 로그인 방식 토큰(IGAA...)을 만료 전에 새 60일 토큰으로 자동 교체한다.
+# App Secret 불필요 — 토큰만으로 갱신(ig_refresh_token).
+# 필요한 Secret (저장소 Settings → Secrets and variables → Actions):
+#   - IG_ACCESS_TOKEN : 현재 유효한 장기 토큰 (게시에도 쓰는 그 토큰)  ← 이미 있음
+#   - GH_PAT          : 이 저장소 Secrets 쓰기 권한 fine-grained PAT  ← 새로 추가
+# 스케줄: 매월 1일·15일 (약 15일 주기, 60일 만료 대비 넉넉).
+
+on:
+  schedule:
+    - cron: '0 3 1,15 * *'
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 장기 토큰 재발급 후 Secret 교체
+        env:
+          CURRENT: ${{ secrets.IG_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          if [ -z "${CURRENT}" ] || [ -z "${GH_TOKEN}" ]; then
+            echo "::error::필수 Secret(IG_ACCESS_TOKEN / GH_PAT) 중 비어 있는 값이 있습니다."
+            exit 1
+          fi
+          echo "ig_refresh_token 방식으로 장기 토큰 재발급 요청..."
+          RESP=$(curl -s -G "https://graph.instagram.com/refresh_access_token" \
+            --data-urlencode "grant_type=ig_refresh_token" \
+            --data-urlencode "access_token=${CURRENT}")
+          NEW=$(printf '%s' "$RESP" | python3 -c "import sys,json;print(json.load(sys.stdin).get('access_token',''))" 2>/dev/null || true)
+          EXPIRES=$(printf '%s' "$RESP" | python3 -c "import sys,json;print(json.load(sys.stdin).get('expires_in',''))" 2>/dev/null || true)
+          if [ -z "$NEW" ]; then
+            ERR=$(printf '%s' "$RESP" | python3 -c "import sys,json;d=json.load(sys.stdin);print(d.get('error',{}).get('message',d))" 2>/dev/null || printf '%s' "$RESP")
+            echo "::error::토큰 재발급 실패. 응답: ${ERR}"
+            exit 1
+          fi
+          echo "새 토큰 발급 성공 (길이 ${#NEW}, 만료까지 ${EXPIRES}초)."
+          echo "GitHub Secret 'IG_ACCESS_TOKEN' 업데이트..."
+          printf '%s' "$NEW" | gh secret set IG_ACCESS_TOKEN --repo "$REPO"
+          echo "완료: 다음 갱신은 스케줄대로 자동 진행됩니다."
