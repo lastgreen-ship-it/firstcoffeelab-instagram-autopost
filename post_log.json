@@ -431,6 +431,14 @@
       "title": "미디어 라운지",
       "media_id": "17864949924658076",
       "status": "success"
+    },
+    {
+      "date": "2026-09-01",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "파도 미디어월",
+      "media_id": "18348166630218456",
+      "status": "success"
     }
   ]
 }
