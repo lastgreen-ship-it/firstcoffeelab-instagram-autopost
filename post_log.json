@@ -455,6 +455,14 @@
       "title": "페이스트리 진열대",
       "media_id": "18073413644448226",
       "status": "success"
+    },
+    {
+      "date": "2026-09-04",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "시그니처 크루아상",
+      "media_id": "18030891746670359",
+      "status": "success"
     }
   ]
 }
