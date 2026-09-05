@@ -463,6 +463,14 @@
       "title": "시그니처 크루아상",
       "media_id": "18030891746670359",
       "status": "success"
+    },
+    {
+      "date": "2026-09-05",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "MD 굿즈 셀렉션",
+      "media_id": "18122679148880499",
+      "status": "success"
     }
   ]
 }
