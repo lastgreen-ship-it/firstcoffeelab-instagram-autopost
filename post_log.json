@@ -471,6 +471,14 @@
       "title": "MD 굿즈 셀렉션",
       "media_id": "18122679148880499",
       "status": "success"
+    },
+    {
+      "date": "2026-09-06",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "바닥 파도 미디어아트",
+      "media_id": "17862737022677223",
+      "status": "success"
     }
   ]
 }
