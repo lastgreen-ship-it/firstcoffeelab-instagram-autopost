@@ -479,6 +479,14 @@
       "title": "바닥 파도 미디어아트",
       "media_id": "17862737022677223",
       "status": "success"
+    },
+    {
+      "date": "2026-09-07",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "라운지 좌석",
+      "media_id": "18102010460041444",
+      "status": "success"
     }
   ]
 }
