@@ -487,6 +487,14 @@
       "title": "라운지 좌석",
       "media_id": "18102010460041444",
       "status": "success"
+    },
+    {
+      "date": "2026-09-08",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "행궁점 공간 전경",
+      "media_id": "18140945215573378",
+      "status": "success"
     }
   ]
 }
