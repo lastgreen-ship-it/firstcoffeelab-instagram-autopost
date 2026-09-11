@@ -511,6 +511,14 @@
       "title": "소파 라운지 홀",
       "media_id": "17890836966434865",
       "status": "success"
+    },
+    {
+      "date": "2026-09-11",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "에스프레소 추출",
+      "media_id": "18189218440402326",
+      "status": "success"
     }
   ]
 }
