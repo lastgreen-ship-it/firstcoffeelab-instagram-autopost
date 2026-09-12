@@ -519,6 +519,14 @@
       "title": "에스프레소 추출",
       "media_id": "18189218440402326",
       "status": "success"
+    },
+    {
+      "date": "2026-09-12",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "스탠딩 테이블",
+      "media_id": "18117752837315003",
+      "status": "success"
     }
   ]
 }
