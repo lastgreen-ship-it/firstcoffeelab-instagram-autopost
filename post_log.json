@@ -543,6 +543,14 @@
       "title": "만천명월 창가바",
       "media_id": "18173857393444433",
       "status": "success"
+    },
+    {
+      "date": "2026-09-15",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "베이커리 쇼케이스",
+      "media_id": "18186309097413510",
+      "status": "success"
     }
   ]
 }
