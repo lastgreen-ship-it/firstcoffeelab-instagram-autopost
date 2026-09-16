@@ -551,6 +551,14 @@
       "title": "베이커리 쇼케이스",
       "media_id": "18186309097413510",
       "status": "success"
+    },
+    {
+      "date": "2026-09-16",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "에스프레소 머신",
+      "media_id": "18008034059990488",
+      "status": "success"
     }
   ]
 }
