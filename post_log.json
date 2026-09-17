@@ -559,6 +559,14 @@
       "title": "에스프레소 머신",
       "media_id": "18008034059990488",
       "status": "success"
+    },
+    {
+      "date": "2026-09-17",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "밤의 정원 수경",
+      "media_id": "18098622437377182",
+      "status": "success"
     }
   ]
 }
