@@ -567,6 +567,14 @@
       "title": "밤의 정원 수경",
       "media_id": "18098622437377182",
       "status": "success"
+    },
+    {
+      "date": "2026-09-18",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "라운지 좌석",
+      "media_id": "17902579044352274",
+      "status": "success"
     }
   ]
 }
