@@ -575,6 +575,14 @@
       "title": "라운지 좌석",
       "media_id": "17902579044352274",
       "status": "success"
+    },
+    {
+      "date": "2026-09-19",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "외관 건축",
+      "media_id": "18118811908888938",
+      "status": "success"
     }
   ]
 }
