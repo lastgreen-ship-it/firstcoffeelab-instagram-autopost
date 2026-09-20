@@ -583,6 +583,14 @@
       "title": "외관 건축",
       "media_id": "18118811908888938",
       "status": "success"
+    },
+    {
+      "date": "2026-09-20",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "원두 디스플레이",
+      "media_id": "17995341110829104",
+      "status": "success"
     }
   ]
 }
