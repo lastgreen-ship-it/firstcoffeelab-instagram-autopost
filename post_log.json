@@ -631,6 +631,14 @@
       "title": "오늘의 메뉴",
       "media_id": "18204870985373390",
       "status": "success"
+    },
+    {
+      "date": "2026-09-26",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "베이커리 쇼케이스",
+      "media_id": "17944896681346000",
+      "status": "success"
     }
   ]
 }
