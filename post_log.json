@@ -639,6 +639,14 @@
       "title": "베이커리 쇼케이스",
       "media_id": "17944896681346000",
       "status": "success"
+    },
+    {
+      "date": "2026-09-27",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "외관 측면",
+      "media_id": "17969323854170139",
+      "status": "success"
     }
   ]
 }
