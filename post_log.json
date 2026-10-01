@@ -671,6 +671,14 @@
       "title": "여유롭게 앉는 소파 라운지",
       "media_id": "18166966270482060",
       "status": "success"
+    },
+    {
+      "date": "2026-10-01",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "빛나는 베이커리 쇼케이스",
+      "media_id": "18077695679709873",
+      "status": "success"
     }
   ]
 }
