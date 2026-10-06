@@ -711,6 +711,14 @@
       "title": "빵이 진열된 쇼케이스 홀",
       "media_id": "18121222252823936",
       "status": "success"
+    },
+    {
+      "date": "2026-10-06",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "초록이 머무는 창가 자리",
+      "media_id": "18129788614834780",
+      "status": "success"
     }
   ]
 }
