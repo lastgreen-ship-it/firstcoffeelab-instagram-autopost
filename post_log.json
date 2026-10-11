@@ -751,6 +751,14 @@
       "title": "추억을 남기는 포토부스",
       "media_id": "18028577921858430",
       "status": "success"
+    },
+    {
+      "date": "2026-10-11",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "빛이 흐르는 긴 복도",
+      "media_id": "18119732713754829",
+      "status": "success"
     }
   ]
 }
