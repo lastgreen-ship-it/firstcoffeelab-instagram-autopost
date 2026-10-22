@@ -839,6 +839,14 @@
       "title": "기둥 사이 여유 공간",
       "media_id": "18074489738766498",
       "status": "success"
+    },
+    {
+      "date": "2026-10-22",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "매일 굽는 오늘의 빵",
+      "media_id": "18038603846841730",
+      "status": "success"
     }
   ]
 }
