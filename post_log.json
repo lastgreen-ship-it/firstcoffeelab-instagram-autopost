@@ -863,6 +863,14 @@
       "title": "창을 따라 늘어선 좌석",
       "media_id": "17894348577613306",
       "status": "success"
+    },
+    {
+      "date": "2026-10-25",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "창 너머 달의 정원",
+      "media_id": "18086401577323393",
+      "status": "success"
     }
   ]
 }
