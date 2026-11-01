@@ -1063,6 +1063,14 @@
       "title": "길게 이어진 넓은 홀",
       "status": "error",
       "error": "컨테이너 생성 실패: {'error': {'message': 'Error validating access token: Session has expired on Friday, 30-Oct-26 01:06:29 PDT. The current time is Sunday, 01-Nov-26 07:05:35 PST.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 0, 'fbtrace_id': 'AgVEIA9o2W5Oz6sdghMZ4uX'}}"
+    },
+    {
+      "date": "2026-11-01",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "길게 이어진 넓은 홀",
+      "status": "error",
+      "error": "컨테이너 생성 실패: {'error': {'message': 'Error validating access token: Session has expired on Friday, 30-Oct-26 01:06:29 PDT. The current time is Sunday, 01-Nov-26 07:58:15 PST.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 0, 'fbtrace_id': 'Ao9OC99BnvKwJHNLuXsvtO2'}}"
     }
   ]
 }
