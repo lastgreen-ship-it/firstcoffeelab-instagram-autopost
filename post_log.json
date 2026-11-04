@@ -1279,6 +1279,14 @@
       "title": "담백한 공간의 여백",
       "status": "error",
       "error": "컨테이너 생성 실패: {'error': {'message': 'Error validating access token: Session has expired on Friday, 30-Oct-26 01:06:29 PDT. The current time is Wednesday, 04-Nov-26 04:56:42 PST.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 0, 'fbtrace_id': 'ANi8oafKmkTL1CeSm9Top1x'}}"
+    },
+    {
+      "date": "2026-11-04",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "담백한 공간의 여백",
+      "status": "error",
+      "error": "컨테이너 생성 실패: {'error': {'message': 'Error validating access token: Session has expired on Friday, 30-Oct-26 01:06:29 PDT. The current time is Wednesday, 04-Nov-26 06:22:49 PST.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 0, 'fbtrace_id': 'ArSyg7skShc0B2b-L94jCF-'}}"
     }
   ]
 }
