@@ -1479,6 +1479,14 @@
       "title": "바위를 곁에 둔 휴식 공간",
       "status": "error",
       "error": "컨테이너 생성 실패: {'error': {'message': 'Error validating access token: Session has expired on Friday, 30-Oct-26 01:06:29 PDT. The current time is Friday, 06-Nov-26 21:55:38 PST.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 0, 'fbtrace_id': 'AO2_IVAI7xDaq26O8ko5wAw'}}"
+    },
+    {
+      "date": "2026-11-07",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "바위를 곁에 둔 휴식 공간",
+      "status": "error",
+      "error": "컨테이너 생성 실패: {'error': {'message': 'Error validating access token: Session has expired on Friday, 30-Oct-26 01:06:29 PDT. The current time is Friday, 06-Nov-26 23:07:43 PST.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 0, 'fbtrace_id': 'AGPKwKLNVi54RP-E-29GU4w'}}"
     }
   ]
 }
