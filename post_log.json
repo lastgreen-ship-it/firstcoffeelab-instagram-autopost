@@ -1767,6 +1767,14 @@
       "title": "결이 살아있는 빵 진열대",
       "status": "error",
       "error": "컨테이너 생성 실패: {'error': {'message': 'Error validating access token: Session has expired on Friday, 30-Oct-26 01:06:29 PDT. The current time is Tuesday, 10-Nov-26 06:46:31 PST.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 0, 'fbtrace_id': 'AUHamYtYFs5CHBWYQfM-YQw'}}"
+    },
+    {
+      "date": "2026-11-10",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "결이 살아있는 빵 진열대",
+      "status": "error",
+      "error": "컨테이너 생성 실패: {'error': {'message': 'Error validating access token: Session has expired on Friday, 30-Oct-26 01:06:29 PDT. The current time is Tuesday, 10-Nov-26 07:31:18 PST.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 0, 'fbtrace_id': 'AjDbttRnMu_5duzon3INAMU'}}"
     }
   ]
 }
