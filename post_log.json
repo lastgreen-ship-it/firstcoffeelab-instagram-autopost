@@ -1919,6 +1919,14 @@
       "title": "탁 트인 테라스",
       "status": "error",
       "error": "컨테이너 생성 실패: {'error': {'message': 'Error validating access token: Session has expired on Friday, 30-Oct-26 01:06:29 PDT. The current time is Thursday, 12-Nov-26 05:43:02 PST.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 0, 'fbtrace_id': 'AgWblYl8IPQy7YyZ3jx5lna'}}"
+    },
+    {
+      "date": "2026-11-12",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "탁 트인 테라스",
+      "status": "error",
+      "error": "컨테이너 생성 실패: {'error': {'message': 'Error validating access token: Session has expired on Friday, 30-Oct-26 01:06:29 PDT. The current time is Thursday, 12-Nov-26 07:03:26 PST.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 0, 'fbtrace_id': 'AYL10dp4ny4FazSxfPWMeP9'}}"
     }
   ]
 }
