@@ -2655,6 +2655,14 @@
       "title": "빛의 공간",
       "status": "error",
       "error": "컨테이너 생성 실패: {'error': {'message': 'Error validating access token: Session has expired on Friday, 30-Oct-26 01:06:29 PDT. The current time is Saturday, 21-Nov-26 07:17:29 PST.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 0, 'fbtrace_id': 'AvhoS4i0EjN3xVEiHplA8-h'}}"
+    },
+    {
+      "date": "2026-11-21",
+      "slot": "am",
+      "type": "IMAGE",
+      "title": "빛의 공간",
+      "status": "error",
+      "error": "컨테이너 생성 실패: {'error': {'message': 'Error validating access token: Session has expired on Friday, 30-Oct-26 01:06:29 PDT. The current time is Saturday, 21-Nov-26 08:07:39 PST.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 0, 'fbtrace_id': 'AsCZULHJqTp9ceuJQPQdm_b'}}"
     }
   ]
 }
